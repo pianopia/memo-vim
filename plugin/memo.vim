@@ -10,6 +10,37 @@ let g:loaded_memovim = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+
+" 線を引く
+function! s:Done(line)
+    :let input = "============================================================\n#"
+    :let pos = getpos(".")
+    :execute ":normal i" . input
+    :call setpos('.', pos)
+endfunction
+command! -nargs=0 HR call s:Done(getline('.'))
+
+
+" HTMLの型を作成
+function! s:HTMLBox(line)
+    :let input = "<DOCTYPE! html>\n<html lang=\"ja\">\n\t<head>\n\t</head>\n\t<body>\n\t</body>\n<html>"
+    :let pos = getpos(".")
+    :execute ":normal i" . input
+    :call setpos('.', pos)
+endfunction
+command! -nargs=0 HTML call s:HTMLBox(getline('.'))
+
+
+" テーブルを作成
+function! s:TableBox(line)
+    :let input = "| 1 | 2 | 3 |\n|--+--+--|\n| | |"
+    :let pos = getpos(".")
+    :execute ":normal i" . input
+    :call setpos('.', pos)
+endfunction
+command! -nargs=0 Table call s:TableBox(getline('.'))  
+
+
 " PHPの型を作成
 function! s:PHPBox(line)
     :let input = "<?php\n\t\n?>"
@@ -17,6 +48,7 @@ function! s:PHPBox(line)
     :execute ":normal i" . input
     :call setpos('.', pos)
 endfunction
+
 
 " PHPの型を呼び出し
 command! -nargs=0 PHP call s:PHPBox(getline('.')) 
