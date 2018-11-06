@@ -10,6 +10,14 @@ let g:loaded_memovim = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+" PHPの型を作成
+function! s:PHPBox(line)
+    :let input = "<?php\n\t\n?>"
+    :let pos = getpos(".")
+    :execute ":normal i" . input
+    :call setpos('.', pos)
+endfunction
+
 " PHPの型を呼び出し
 command! -nargs=0 PHP call s:PHPBox(getline('.')) 
 
