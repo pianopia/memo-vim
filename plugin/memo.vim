@@ -49,6 +49,14 @@ function! s:PHPBox(line)
     :call setpos('.', pos)
 endfunction
 
+"dein.toml用コマンド
+function! s:TomlPlugins(line)
+    :let input = "[[plugins]] # comment\nrepo = ''"
+    :let pos = getpos(".")
+    :execure ":normal i" . input
+    :call setpos('.', pos)
+endfunction
+command! -nargs=0 Plugins call s:TomlPlugins(getline('.'))
 
 " PHPの型を呼び出し
 command! -nargs=0 PHP call s:PHPBox(getline('.')) 
