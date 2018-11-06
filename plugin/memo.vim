@@ -53,7 +53,7 @@ endfunction
 function! s:TomlPlugins(line)
     :let input = "[[plugins]] # comment\nrepo = ''"
     :let pos = getpos(".")
-    :execure ":normal i" . input
+    :execute ":normal i" . input
     :call setpos('.', pos)
 endfunction
 command! -nargs=0 Plugins call s:TomlPlugins(getline('.'))
