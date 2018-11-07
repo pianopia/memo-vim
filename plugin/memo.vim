@@ -41,14 +41,6 @@ endfunction
 command! -nargs=0 Table call s:TableBox(getline('.'))  
 
 
-" PHPの型を作成
-function! memo#PHPBox(line)
-    :let input = "<?php\n\t\n?>"
-    :let pos = getpos(".")
-    :execute ":normal i" . input
-    :call setpos('.', pos)
-endfunction
-
 "dein.toml用コマンド
 function! s:TomlPlugins(line)
     :let input = "[[plugins]] # comment\nrepo = ''"
