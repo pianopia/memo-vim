@@ -27,6 +27,13 @@ function! memo#HTMLBox(line)
     :call setpos('.', pos)
 endfunction
 
+" Pythonのコメント
+function! memo#Pycome(line)
+    :let input = "################################################################\n#"
+    :let pos = getpos(".")
+    :execute ":normal i" . input
+    :call setpos('.', pos)
+endfunction
 
 " テーブルを作成
 function! memo#TableBox(line)

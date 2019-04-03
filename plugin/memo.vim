@@ -18,6 +18,8 @@ command! -nargs=0 HR call memo#Hr(getline('.'))
 " HTMLの型を作成
 command! -nargs=0 HTML call memo#HTMLBox(getline('.'))
 
+" Pythonコメント
+command! -nargs=0 PyCM call memo#Pycome(getline('.'))
 
 " テーブルを作成
 command! -nargs=0 Table call memo#TableBox(getline('.'))  
