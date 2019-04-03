@@ -10,9 +10,18 @@ let g:memovim = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-" 線を引く
+" メモ用の線を引く
 function! memo#Hr(line)
     :let input = "============================================================\n#"
+    :let pos = getpos(".")
+    :execute ":normal i" . input
+    :call setpos('.', pos)
+endfunction
+
+
+" 細い線を引く
+function! memo#Hrt(line)
+    :let input = "------------------------------------------------------------\n"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
