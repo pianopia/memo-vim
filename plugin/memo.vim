@@ -17,6 +17,8 @@ command! -nargs=0 HR call memo#Hr(getline('.'))
 " 細い線を引く
 command! -nargs=0 HRT call memo#Hrt(getline('.'))
 
+" Alias
+command! -nargs=0 Alias call memo#Alias(getline('.'))
 
 " HTMLの型を作成
 command! -nargs=0 HTML call memo#HTMLBox(getline('.'))

@@ -27,6 +27,13 @@ function! memo#Hrt(line)
     :call setpos('.', pos)
 endfunction
 
+" Vimコマンドのチートシート
+function! memo#Alias(line)
+    :let input = "$ HR\n$ Alias\n$ HTML\n$ Table\n$ Pycome\n"
+    :let pos = getpos(".")
+    :execute ":normal i" . input
+    :call setpos('.', pos)
+endfunction
 
 " HTMLの型を作成
 function! memo#HTMLBox(line)
