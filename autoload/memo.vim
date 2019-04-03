@@ -29,10 +29,7 @@ endfunction
 
 " Vimコマンドのチートシート
 function! memo#Alias(line)
-    :let input = "$ HR\n$ Alias\n$ HTML\n$ Table\n$ Pycome\n"
-    :let pos = getpos(".")
-    :execute ":normal i" . input
-    :call setpos('.', pos)
+    :echo "$ HR\n$ Alias\n$ HTML\n$ Table\n$ Pycome\n"
 endfunction
 
 " HTMLの型を作成
