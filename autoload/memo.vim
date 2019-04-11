@@ -11,7 +11,7 @@ let s:save_cpo = &cpo
 set cpo&vim
 
 " チートシート
-function! memo#ChaetSheet(line)
+function! memo#CheatSheet(line)
     :echo "Hr:線, Hrt:細い線, Alias, HTMLBox, Pycome, TableBox, TomlPlugins, PHPBox"
 endfunction
 
