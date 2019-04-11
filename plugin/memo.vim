@@ -10,6 +10,8 @@ let g:memovim = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+" チートシート
+command! -nargs=0 CS call memo#CheatSheet(getline('.'))
 
 " 線を引く
 command! -nargs=0 HR call memo#Hr(getline('.'))

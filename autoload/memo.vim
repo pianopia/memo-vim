@@ -10,6 +10,11 @@ let g:memovim = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+" チートシート
+function! memo#ChaetSheet(line)
+    :echo "Hr:線, Hrt:細い線, Alias, HTMLBox, Pycome, TableBox, TomlPlugins, PHPBox"
+endfunction
+
 " メモ用の線を引く
 function! memo#Hr(line)
     :let input = "============================================================\n#"
