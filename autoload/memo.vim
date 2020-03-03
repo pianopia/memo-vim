@@ -39,7 +39,7 @@ endfunction
 
 " HTMLの型を作成
 function! memo#HTMLBox(line)
-    :let input = "<DOCTYPE! html>\n<html lang=\"ja\">\n\t<head>\n\t</head>\n\t<body>\n\t</body>\n<html>"
+    :let input = "<DOCTYPE! html>\n<html lang=\"ja\">\n\t<head>\n\t<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0\">\n</head>\n\t<body>\n\t</body>\n<html>"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
