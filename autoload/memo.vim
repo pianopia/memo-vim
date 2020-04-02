@@ -34,7 +34,11 @@ endfunction
 
 " Vimコマンドのチートシート
 function! memo#Alias(line)
-    :echo "$ HR\n$ Alias\n$ HTML\n$ Table\n$ Pycome\n"
+    :echo "$ HR\n"
+        \ ."$ Alias\r\n"
+        \ ."$ HTML\r\n"
+        \ ."$ Table\r\n"
+        \ ."$ Pycome\r\n"
 endfunction
 
 " HTMLの型を作成
@@ -42,9 +46,9 @@ function! memo#HTMLBox(line)
     :let input = "<DOCTYPE! html>\r\n"
                 \ ."<html lang=\"ja\">\r\n"
                 \ ."\t<head>\r\n"
-                \ ."\t<meta charset=\"utf-8\">\r\n"
-                \ ."<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0\">\r\n"
-                \ ."</head>\r\n"
+                \ ."\t\t<meta charset=\"utf-8\">\r\n"
+                \ ."\t\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0\">\r\n"
+                \ ."\t</head>\r\n"
                 \ ."\t<body>\r\n"
                 \ ."\t</body>\r\n"
                 \ ."<html>"
