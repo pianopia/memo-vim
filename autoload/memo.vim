@@ -17,7 +17,7 @@ endfunction
 
 " メモ用の線を引く
 function! memo#Hr(line)
-    :let input = "============================================================\n#"
+    :let input = "============================================================\r\n#"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
@@ -26,7 +26,7 @@ endfunction
 
 " 細い線を引く
 function! memo#Hrt(line)
-    :let input = "------------------------------------------------------------\n"
+    :let input = "------------------------------------------------------------\r\n"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
@@ -39,7 +39,15 @@ endfunction
 
 " HTMLの型を作成
 function! memo#HTMLBox(line)
-    :let input = "<DOCTYPE! html>\n<html lang=\"ja\">\n\t<head>\n\t<meta charset=\"utf-8\">\n<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0\">\n</head>\n\t<body>\n\t</body>\n<html>"
+    :let input = "<DOCTYPE! html>\r\n"
+                + "<html lang=\"ja\">\r\n"
+                + "\t<head>\r\n"
+                + "\t<meta charset=\"utf-8\">\r\n"
+                + "<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0\">\r\n"
+                + "</head>\r\n"
+                + "\t<body>\r\n"
+                + "\t</body>\r\n"
+                + "<html>"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
