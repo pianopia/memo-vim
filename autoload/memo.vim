@@ -43,7 +43,7 @@ endfunction
 
 " HTMLの型を作成
 function! memo#HTMLBox(line)
-    :let input = "<DOCTYPE! html>\r\n"
+    :let input = "<!DOCTYPE html>\r\n"
                 \ ."<html lang=\"ja\">\r\n"
                 \ ."\t<head>\r\n"
                 \ ."\t\t<meta charset=\"utf-8\">\r\n"
@@ -59,7 +59,7 @@ endfunction
 
 " Pythonのコメント
 function! memo#Pycome(line)
-    :let input = "################################################################\n#"
+    :let input = "################################################################\r\n#"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
@@ -76,7 +76,8 @@ endfunction
 
 "dein.toml用コマンド
 function! memo#TomlPlugins(line)
-    :let input = "[[plugins]] # comment\nrepo = ''"
+    :let input = "[[plugins]] # comment"
+              \ ."\nrepo = ''"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
