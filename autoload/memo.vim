@@ -91,6 +91,16 @@ function! memo#PHPBox(line)
     :call setpos('.', pos)
 endfunction
 
+" 小説モード
+function! memo#ColorToStory(line)
+    :set background=light
+    :hi clear
+    :if exists("syntax_on")
+    :   syntax reset
+    :endif
+    :set t_Co=256
+endfunction
+
 " ユーザー設定再開
 let &cpo = s:save_cpo
 unlet s:save_cpo

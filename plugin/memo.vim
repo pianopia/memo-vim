@@ -38,6 +38,9 @@ command! -nargs=0 Plugins call memo#TomlPlugins(getline('.'))
 " PHPの型を呼び出し
 command! -nargs=0 PHP call memo#PHPBox(getline('.')) 
 
+" 小説モード
+command! -nargs=0 Story call ColorToStory(getline('.'))
+
 " ユーザー設定の再開
 let &cpo = s:save_cpo
 unlet s:save_cpo
