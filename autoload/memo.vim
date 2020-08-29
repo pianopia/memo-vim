@@ -34,18 +34,9 @@ function! memo#Hrt(line)
     :call setpos('.', pos)
 endfunction
 
-" Vimコマンドのチートシート
-function! memo#Alias(line)
-    :echo "$ HR\n"
-        \ ."$ Alias\r\n"
-        \ ."$ HTML\r\n"
-        \ ."$ Table\r\n"
-        \ ."$ Pycome\r\n"
-endfunction
-
 " HTMLの型を作成
 function! memo#HTMLBox(line)
-    :let inputfile = "%/template/temp.html"
+    :let inputfile = "~/.vim/memo-vim/template/temp.html"
     :execute ":edit " . escape(inputfile, ' ')
 endfunction
 
