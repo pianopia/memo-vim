@@ -47,17 +47,9 @@ endfunction
 
 " HTMLの型を作成
 function! memo#HTMLBox(line)
-    :let input = "<!DOCTYPE html>\r\n"
-                \ ."<html lang=\"ja\">\r\n"
-                \ ."\t<head>\r\n"
-                \ ."\t\t<meta charset=\"utf-8\">\r\n"
-                \ ."\t\t<meta name=\"viewport\" content=\"width=device-width,initial-scale=1.0,minimum-scale=1.0\">\r\n"
-                \ ."\t</head>\r\n"
-                \ ."\t<body>\r\n"
-                \ ."\t</body>\r\n"
-                \ ."<html>"
+    :let inputfile
     :let pos = getpos(".")
-    :execute ":normal i" . input
+    :execute ":normal i" . inputfile
     :call setpos('.', pos)
 endfunction
 
