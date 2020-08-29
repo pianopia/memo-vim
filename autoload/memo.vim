@@ -49,7 +49,7 @@ endfunction
 function! memo#HTMLBox(line)
     :let inputfile = "./template/temp.html"
     :let pos = getpos(".")
-    :execute ":normal i" . inputfile
+    :execute ":normal i" . readfile(inputfile)
     :call setpos('.', pos)
 endfunction
 
