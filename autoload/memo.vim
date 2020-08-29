@@ -67,7 +67,7 @@ endfunction
 
 " PHPの型を作成
 function! memo#PHPBox(line)
-    :let input = "<?php\r\n\t\n?>"
+    :let input = "<?php \r\n \r\n ?>"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
