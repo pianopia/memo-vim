@@ -49,8 +49,10 @@ endfunction
 function! memo#HTMLBox(line)
     :let inputfile = "./template/temp.html"
     :let pos = getpos(".")
-    :execute ":normal i" . readfile(inputfile)
-    :call setpos('.', pos)
+    :for line in readfile(inputfile)
+      :execute ":normal i" . line
+      :call setpos('.', pos)
+    :endfor
 endfunction
 
 " Pythonのコメント
