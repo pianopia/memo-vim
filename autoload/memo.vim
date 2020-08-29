@@ -16,7 +16,6 @@ function! memo#CheatSheet(line)
   :for line in readfile(inputfile)
     echo line
   :endfor
-"    :echo "HR: 線\r\nHrt:細い線, Alias, HTMLBox, Pycome, TableBox, TomlPlugins, PHPBox"
 endfunction
 
 " メモ用の線を引く
@@ -26,7 +25,6 @@ function! memo#Hr(line)
     :execute ":normal i" . input
     :call setpos('.', pos)
 endfunction
-
 
 " 細い線を引く
 function! memo#Hrt(line)
@@ -47,7 +45,7 @@ endfunction
 
 " HTMLの型を作成
 function! memo#HTMLBox(line)
-    :let inputfile = "./template/temp.html"
+    :let inputfile = "%/template/temp.html"
     :execute ":edit " . escape(inputfile, ' ')
 endfunction
 
