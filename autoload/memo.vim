@@ -10,11 +10,10 @@ let g:memovim = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
-let cs = "./txt/cheatsheet.txt"
-
 " チートシート
 function! memo#CheatSheet(line)
-  :for line in readfile(cs)
+  let inputfile = "./txt/cheatsheet.txt"
+  :for line in readfile(inputfile)
     echo line
   :endfor
 "    :echo "HR: 線\r\nHrt:細い線, Alias, HTMLBox, Pycome, TableBox, TomlPlugins, PHPBox"
