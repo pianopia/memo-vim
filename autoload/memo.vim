@@ -12,7 +12,7 @@ set cpo&vim
 
 " チートシート
 function! memo#CheatSheet(line)
-  let inputfile = "./txt/cheatsheet.txt"
+  let inputfile = "./template/cheatsheet.txt"
   :for line in readfile(inputfile)
     echo line
   :endfor
@@ -47,7 +47,7 @@ endfunction
 
 " HTMLの型を作成
 function! memo#HTMLBox(line)
-    :let inputfile
+    :let inputfile = "./template/temp.html"
     :let pos = getpos(".")
     :execute ":normal i"
     :for line in readfile(inputfile)
