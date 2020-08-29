@@ -56,7 +56,6 @@ function! memo#TableBox(line)
     :call setpos('.', pos)
 endfunction
 
-
 "dein.toml用コマンド
 function! memo#TomlPlugins(line)
     :let input = "[[plugins]] # comment"
@@ -68,7 +67,7 @@ endfunction
 
 " PHPの型を作成
 function! memo#PHPBox(line)
-    :let input = "<?php\n\t\n?>"
+    :let input = "<?php\r\n\t\n?>"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
