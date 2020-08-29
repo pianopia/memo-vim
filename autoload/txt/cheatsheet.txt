@@ -1,1 +1,11 @@
 HR: 区切り線
+CS: チートシートの表示
+HRT: 細い線
+Alias
+HTMLBox
+Pycome
+TableBox
+Toml
+Plugins
+PHPBox
+
