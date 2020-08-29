@@ -48,11 +48,20 @@ endfunction
 " HTMLの型を作成
 function! memo#HTMLBox(line)
     :let inputfile = "./template/temp.html"
+    :execute ":edit " . escape(inputfile, ' ')
+    :let lastlineno = line("$")
     :let pos = getpos(".")
-    :for line in readfile(inputfile)
-      :execute ":normal i" . line
+
+    :let i = 0
+    :while i < lastlineno
+      :let i = i + 1
+      :execute ":normal i" . getline(i)
       :call setpos('.', pos)
-    :endfor
+    :endwhile
+    ":for line in readfile(inputfile)
+    "  :execute ":normal i" . line
+    "  :call setpos('.', pos)
+    ":endfor
 endfunction
 
 " Pythonのコメント
