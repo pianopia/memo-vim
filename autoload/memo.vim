@@ -10,9 +10,14 @@ let g:memovim = 1
 let s:save_cpo = &cpo
 set cpo&vim
 
+let cs = "./txt/cheatsheet.txt"
+
 " チートシート
 function! memo#CheatSheet(line)
-    :echo "Hr:線, Hrt:細い線, Alias, HTMLBox, Pycome, TableBox, TomlPlugins, PHPBox"
+  :for line in readfile(cs);
+    echo line
+  :endfor
+"    :echo "HR: 線\r\nHrt:細い線, Alias, HTMLBox, Pycome, TableBox, TomlPlugins, PHPBox"
 endfunction
 
 " メモ用の線を引く
