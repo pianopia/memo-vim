@@ -50,7 +50,7 @@ endfunction
 
 " テーブルを作成
 function! memo#TableBox(line)
-    :let input = "| 1 | 2 | 3 |\r\n|--+--+--|\n| | |"
+    :let input = "| 1 | 2 | 3 |\r\n|--+--+--|\r\n| | |"
     :let pos = getpos(".")
     :execute ":normal i" . input
     :call setpos('.', pos)
