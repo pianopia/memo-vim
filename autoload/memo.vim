@@ -49,19 +49,6 @@ endfunction
 function! memo#HTMLBox(line)
     :let inputfile = "./template/temp.html"
     :execute ":edit " . escape(inputfile, ' ')
-    :let lastlineno = line("$")
-
-    ":let i = 0
-    ":while i < lastlineno
-    "  :let pos = getpos(".")
-    "  :let i = i + 1
-    "  :execute ":normal i" . getline(i)
-    "  :call setpos('.', pos)
-    ":endwhile
-    ":for line in readfile(inputfile)
-    "  :execute ":normal i" . line
-    "  :call setpos('.', pos)
-    ":endfor
 endfunction
 
 " Pythonのコメント
