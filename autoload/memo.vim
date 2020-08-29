@@ -48,7 +48,7 @@ endfunction
 " HTMLの型を作成
 function! memo#HTMLBox(line)
     :let inputfile = "./template/temp.html"
-    :execute ":edit " . escape(inputfile, ' ')
+    ":execute ":edit " . escape(inputfile, ' ')
     :let lastlineno = line("$")
 
     :let i = 0
