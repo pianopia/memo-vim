@@ -27,6 +27,8 @@ command! -nargs=0 HTML call memo#HTMLBox(getline('.'))
 
 " Pythonコメント
 command! -nargs=0 PyCM call memo#Pycome(getline('.'))
+command! -nargs=0 Pycome call memo#Pycome(getline('.'))
+command! -nargs=0 Pycomment call memo#Pycome(getline('.'))
 
 " テーブルを作成
 command! -nargs=0 Table call memo#TableBox(getline('.'))  
