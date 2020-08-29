@@ -14,7 +14,7 @@ let cs = "./txt/cheatsheet.txt"
 
 " チートシート
 function! memo#CheatSheet(line)
-  :for line in readfile(cs);
+  :for line in readfile(cs)
     echo line
   :endfor
 "    :echo "HR: 線\r\nHrt:細い線, Alias, HTMLBox, Pycome, TableBox, TomlPlugins, PHPBox"
