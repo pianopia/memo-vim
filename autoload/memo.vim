@@ -50,10 +50,10 @@ function! memo#HTMLBox(line)
     :let inputfile = "./template/temp.html"
     :execute ":edit " . escape(inputfile, ' ')
     :let lastlineno = line("$")
-    :let pos = getpos(".")
 
     :let i = 0
     :while i < lastlineno
+      :let pos = getpos(".")
       :let i = i + 1
       :execute ":normal i" . getline(i)
       :call setpos('.', pos)
