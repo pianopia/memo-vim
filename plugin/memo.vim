@@ -33,7 +33,7 @@ command! -nargs=0 Pycome call memo#Pycome(getline('.'))
 command! -nargs=0 Pycomment call memo#Pycome(getline('.'))
 
 " テーブルを作成
-command! -nargs=0 mdTable call memo#TableBox(getline('.'))  
+command! -nargs=0 MdTable call memo#TableBox(getline('.'))  
 
 
 "dein.toml用コマンド
